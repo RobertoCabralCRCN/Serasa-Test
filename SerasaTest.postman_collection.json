@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "e8d0a28d-d770-4ca2-901b-b731b7fec921",
+		"name": "Serasa Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25774681"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"item": [
+				{
+					"name": "Create Producer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"producer_name\": \"Benedito Pereira Costa Neto\",\r\n    \"person_type\": \"PF\",\r\n    \"document\": \"35081898058\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/producers",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"producers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/producers/3594a864-ee01-4fdb-9641-922dfcbc70f2",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"producers",
+								"3594a864-ee01-4fdb-9641-922dfcbc70f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Producers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/producers",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"producers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Producer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"producer_name\": \"Vicentino Ramos Souza Filho\",\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/producers/3594a864-ee01-4fdb-9641-922dfcbc70f2",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"producers",
+								"3594a864-ee01-4fdb-9641-922dfcbc70f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Producer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/producers/6459ada9-387f-423d-a878-f898c9415045",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"producers",
+								"6459ada9-387f-423d-a878-f898c9415045"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Culture",
+			"item": [
+				{
+					"name": "Create Culture",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"culture_name\": \"Arroz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cultures",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cultures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Cultures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/cultures",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cultures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id Cultures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/cultures/1",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cultures",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farm",
+			"item": [
+				{
+					"name": "Create Farm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"producer_id\": \"cbe3c862-ff34-442a-ab67-c21a4ef45374\",\r\n    \"farm_name\": \"Fazenda do meu pai\",\r\n    \"city\": \"La nao sei aonde\",\r\n    \"state\": \"SP\",\r\n    \"agricultural_area_ectares\": 45,\r\n    \"vegetation_area_ectares\": 45,\r\n    \"total_area_ectares\": 160,\r\n    \"crops\": [\r\n         4\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/farms",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/farms/a9a325b2-f531-4d97-83fb-ad958cc4f485",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"farms",
+								"a9a325b2-f531-4d97-83fb-ad958cc4f485"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Farm",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/farms/a9a325b2-f531-4d97-83fb-ad958cc4f485",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"farms",
+								"a9a325b2-f531-4d97-83fb-ad958cc4f485"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Farm",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"farm_name\": \"Ramos Filho Fazenda de Gados\",\r\n    \"city\": \"Salesópolis\",\r\n    \"state\": \"SP\",\r\n    \"agricultural_area_ectares\": 45,\r\n    \"vegetation_area_ectares\": 45,\r\n    \"total_area_ectares\": 160,\r\n    \"is_active\": true,\r\n    \"crops\": [\r\n        1,2\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/farms/a9a325b2-f531-4d97-83fb-ad958cc4f485",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"farms",
+								"a9a325b2-f531-4d97-83fb-ad958cc4f485"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Farms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/farms",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"farms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
